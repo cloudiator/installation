@@ -7,10 +7,10 @@ if [[ $USER != "root" ]]; then
 fi 
 
 #download kairosdb
-wget https://github.com/kairosdb/kairosdb/releases/download/v0.9.4/kairosdb-0.9.4-6.tar.gz
+wget https://github.com/kairosdb/kairosdb/releases/download/v1.1.1/kairosdb-1.1.1-1.tar.gz
 
 #extract kairosdb
-tar -xzf kairosdb-0.9.4-6.tar.gz
+tar -xzf kairosdb-1.1.1-1.tar.gz
 
 #start kairosdb (with default datastore H2) in background
 nohup kairosdb/bin/kairosdb.sh run > kairos.out & 

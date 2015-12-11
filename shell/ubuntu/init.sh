@@ -10,6 +10,10 @@ fi
 add-apt-repository ppa:webupd8team/java -y
 apt-get update
 
+apt-get install -y wget
+
+apt-get install -y maven
+
 #disable ipv6 because at least for the ubuntu server (cloud image) 14.04 will bind the address to an ipv6 address as default 
 #add these properties to the end of the /etc/sysctl.conf
 echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf

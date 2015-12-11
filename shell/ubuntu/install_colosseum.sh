@@ -10,18 +10,16 @@ if [[ $USER != "root" ]]; then
 fi 
 
 #download the colosseum master repo 
-wget https://github.com/cloudiator/colosseum/archive/master.zip -O colosseum.zip
-
-unzip colosseum.zip
+git clone https://github.com/cloudiator/colosseum.git
 
 #create config file
-touch colosseum-master/conf/config.conf
+touch colosseum/conf/config.conf
 
-echo "include \"application.conf\"" >>  colosseum-master/conf/config.conf
-echo  echo "application.secret=\"sandlandnpoj33qkpsajfdpjd30jd\"" >>  colosseum-master/conf/config.conf 
-echo "db.default.driver=org.mariadb.jdbc.Driver" >>  colosseum-master/conf/config.conf 
-echo "db.default.url=\"mysql://root:topsecret@localhost/colosseum\"" >>  colosseum-master/conf/config.conf 
+echo "include \"application.conf\"" >>  colosseum/conf/config.conf
+echo  echo "application.secret=\"sandlandnpoj33qkpsajfdpjd30jd\"" >>  colosseum/conf/config.conf 
+echo "db.default.driver=org.mariadb.jdbc.Driver" >>  colosseum/conf/config.conf 
+echo "db.default.url=\"mysql://root:topsecret@localhost/colosseum\"" >>  colosseum/conf/config.conf 
 
-#start colosseum in a screen
-cd colosseum-master
-screen -S colosseum -d -m ../activator-dist-1.3.6/activator -Dconfig.file=conf/config.conf run
+#start colosseum in a screen, requires etcd running on localhost, otherwise change the respective args
+cd colosseum
+screen -S colosseum -d -m ../activator-dist-1.3.6/activator -Dconfig.file=conf/config.conf -Dlca.client.config.registry=etcdregistry -Dlca.client.config.registry.etcd.hosts=localhost run
