@@ -15,4 +15,4 @@ tar xzvf etcd-v2.1.1-linux-amd64.tar.gz
 
 #start etcd on default ports 2379, 4001
 cd etcd-v2.1.1-linux-amd64
-nohup ./etcd --advertise-client-urls "http://${local_address_trimmed}:2379,http://${local_address_trimmed}:4001" --listen-client-urls="http://${local_address_trimmed}:2379,http://${local_address_trimmed}:4001" > log.out &
+nohup ./etcd --advertise-client-urls "http://${local_address}:2379,http://${local_address}:4001" --listen-client-urls="http://${local_address}:2379,http://${local_address}:4001" > log.out &

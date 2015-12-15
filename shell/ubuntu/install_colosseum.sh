@@ -9,6 +9,8 @@ if [[ $USER != "root" ]]; then
 		exit 1
 fi 
 
+local_address=`hostname -I`
+
 #download the colosseum master repo 
 git clone https://github.com/cloudiator/colosseum.git
 
@@ -22,4 +24,4 @@ echo "db.default.url=\"mysql://root:topsecret@localhost/colosseum\"" >>  colosse
 
 #start colosseum in a screen, requires etcd running on localhost, otherwise change the respective args
 cd colosseum
-screen -S colosseum -d -m ../activator-dist-1.3.6/activator -Dconfig.file=conf/config.conf -Dlca.client.config.registry=etcdregistry -Dlca.client.config.registry.etcd.hosts=localhost run
+screen -S colosseum -d -m ../activator-dist-1.3.6/activator -Dconfig.file=conf/config.conf -Dlca.client.config.registry=etcdregistry -Dlca.client.config.registry.etcd.hosts=${local_address} run
