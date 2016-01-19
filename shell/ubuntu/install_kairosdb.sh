@@ -13,4 +13,4 @@ wget https://github.com/kairosdb/kairosdb/releases/download/v1.1.1/kairosdb-1.1.
 tar -xzf kairosdb-1.1.1-1.tar.gz
 
 #start kairosdb (with default datastore H2) in background
-nohup kairosdb/bin/kairosdb.sh run > kairos.out & 
+kairosdb/bin/kairosdb.sh start
