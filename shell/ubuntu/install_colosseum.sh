@@ -9,7 +9,8 @@ if [[ $USER != "root" ]]; then
 		exit 1
 fi 
 
-local_address=`hostname -I`
+#resolve public ip of host
+local_address=$(dig +short myip.opendns.com @resolver1.opendns.com)
 
 #download the colosseum master repo 
 git clone https://github.com/cloudiator/colosseum.git
