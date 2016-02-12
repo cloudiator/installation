@@ -6,7 +6,7 @@ if [[ $USER != "root" ]]; then
 		exit 1
 fi
 
-local_address=`hostname -I`
+local_address=$(ip route get 8.8.8.8 | awk '{print $NF; exit}')
 
 #download etcd
 wget https://github.com/coreos/etcd/releases/download/v2.1.1/etcd-v2.1.1-linux-amd64.tar.gz -O etcd-v2.1.1-linux-amd64.tar.gz
