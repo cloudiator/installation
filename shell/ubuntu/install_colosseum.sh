@@ -21,7 +21,7 @@ touch colosseum/conf/config.conf
 echo "include \"application.conf\"" >>  colosseum/conf/config.conf
 echo  echo "application.secret=\"sandlandnpoj33qkpsajfdpjd30jd\"" >>  colosseum/conf/config.conf 
 echo "db.default.driver=org.mariadb.jdbc.Driver" >>  colosseum/conf/config.conf 
-echo "db.default.url=\"mysql://root:topsecret@localhost/colosseum\"" >>  colosseum/conf/config.conf 
+echo "db.default.url=\"mysql://root:$MYSQLPW@localhost/colosseum\"" >>  colosseum/conf/config.conf 
 
 #start colosseum in a screen, requires etcd running on localhost, otherwise change the respective args
 cd colosseum
