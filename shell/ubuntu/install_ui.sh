@@ -15,4 +15,4 @@ git clone https://tuleap.ow2.org/plugins/git/paasage/executionware_ui.git
 rm -rf /var/www/html/executionware_ui
 mv executionware_ui /var/www/html/
 
-chown www-data:www-data /var/Www/html/executionware_ui
+chown www-data:www-data /var/www/html/executionware_ui
