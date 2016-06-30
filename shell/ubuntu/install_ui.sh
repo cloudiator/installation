@@ -13,7 +13,7 @@ a2enmod rewrite
 git clone https://tuleap.ow2.org/plugins/git/paasage/executionware_ui.git
 
 rm -f /etc/apache2/sites-enabled/*
-cp ui.conf /etc/apache/sites-enabled/
+cp ui.conf /etc/apache2/sites-enabled/
 
 rm -rf /var/www/html/executionware_ui
 mv executionware_ui /var/www/html/
