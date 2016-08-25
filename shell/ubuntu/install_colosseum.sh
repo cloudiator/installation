@@ -5,6 +5,11 @@ echo -n "Password for mysql database:"
 read -s MYSQLPW
 echo
 
+# Read Nodegroup
+echo -n "NodeGroup (unique name for your cloudiator installation, should be dns compatible)"
+read -s NODEGROUP
+echo
+
 #check if this script is run as root
 if [[ $USER != "root" ]]; then 
 		echo "This script must be run as root!" 
@@ -24,9 +29,10 @@ git clone https://github.com/cloudiator/colosseum.git
 touch colosseum/conf/config.conf
 
 echo "include \"application.conf\"" >>  colosseum/conf/config.conf
-echo  echo "application.secret=\"$SECRET\"" >>  colosseum/conf/config.conf
+echo "play.crypto.secret =\"$SECRET\"" >>  colosseum/conf/config.conf
 echo "db.default.driver=org.mariadb.jdbc.Driver" >>  colosseum/conf/config.conf 
-echo "db.default.url=\"mysql://root:$MYSQLPW@localhost/colosseum\"" >>  colosseum/conf/config.conf 
+echo "db.default.url=\"mysql://root:$MYSQLPW@localhost/colosseum\"" >>  colosseum/conf/config.conf
+echo "colosseum.nodegroup = \"$NODEGROUP\"" >> colosseum/conf/config.conf
 
 #start colosseum in a screen, requires etcd running on localhost, otherwise change the respective args
 cd colosseum
