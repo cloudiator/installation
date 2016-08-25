@@ -1,6 +1,6 @@
 #!/bin/sh
 
-local_address=$(ip route get 8.8.8.8 | awk '{print $NF; exit}')
+local_address=$(dig +short myip.opendns.com @resolver1.opendns.com)
 
 #download etcd
 wget https://github.com/coreos/etcd/releases/download/v2.1.1/etcd-v2.1.1-linux-amd64.tar.gz -O etcd.tar.gz

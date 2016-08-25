@@ -18,3 +18,5 @@ echo "#### Installing colosseum ####"
 ./install_colosseum.sh
 echo "#### Installing axe ####"
 ./install_axe_aggregator.sh
+echo "#### Installing ui ####"
+./install_ui.sh
