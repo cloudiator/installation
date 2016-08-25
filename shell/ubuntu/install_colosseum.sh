@@ -7,7 +7,7 @@ echo
 
 # Read Nodegroup
 echo -n "NodeGroup (unique name for your cloudiator installation, should be dns compatible)"
-read -s NODEGROUP
+read NODEGROUP
 echo
 
 #check if this script is run as root
