@@ -1,14 +1,18 @@
 #!/bin/bash
 
-#check if this script is run as root
-if [[ $USER != "root" ]]; then 
-		echo "This script must be run as root!" 
-		exit 1
-fi 
+MY_DIR="$(dirname "$0")"
+source "$MY_DIR/util.sh"
 
-#install java 8 and upate packages
+#check if this script is run as root
+if [[ $USER != "root" ]]; then
+		echo "This script must be run as root!"
+		exit 1
+fi
+
+# install java 8 and upate packages
 add-apt-repository ppa:webupd8team/java -y
-apt-get update
+
+apt_update
 
 apt-get install -y wget
 
@@ -36,5 +40,3 @@ apt-get install unzip
 unzip activator.zip
 
 rm activator.zip
-
-#export PATH=$PATH:activator-dist-1.3.6/

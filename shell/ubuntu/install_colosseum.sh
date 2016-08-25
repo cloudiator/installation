@@ -37,3 +37,4 @@ echo "colosseum.nodegroup = \"$NODEGROUP\"" >> colosseum/conf/config.conf
 #start colosseum in a screen, requires etcd running on localhost, otherwise change the respective args
 cd colosseum
 screen -S colosseum -d -m ../activator-dist-1.3.6/activator -Dconfig.file=conf/config.conf -Dlca.client.config.registry=etcdregistry -Dlca.client.config.registry.etcd.hosts=${local_address} run
+cd ..
