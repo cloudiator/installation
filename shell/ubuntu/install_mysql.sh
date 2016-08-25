@@ -1,7 +1,9 @@
 #!/bin/bash
 
-#please chose here your mysql root passowrd carefully
-MYSQLPW="topsecret"
+# Read Password
+echo -n "Password for mysql database:"
+read -s MYSQLPW
+echo
 
 #check if this script is run as root
 if [[ $USER != "root" ]]; then 
