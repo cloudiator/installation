@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#check if this script is run as root
-if [[ $USER != "root" ]]; then 
-		echo "This script must be run as root!" 
-		exit 1
-fi 
-
 #download kairosdb
 wget https://github.com/kairosdb/kairosdb/releases/download/v1.1.1/kairosdb-1.1.1-1.tar.gz -O kairosdb.tar.gz
 

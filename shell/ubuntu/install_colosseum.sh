@@ -10,12 +10,6 @@ echo -n "NodeGroup (unique name for your cloudiator installation, should be dns 
 read NODEGROUP
 echo
 
-#check if this script is run as root
-if [[ $USER != "root" ]]; then 
-		echo "This script must be run as root!" 
-		exit 1
-fi 
-
 #resolve public ip of host
 local_address=$(dig +short myip.opendns.com @resolver1.opendns.com)
 

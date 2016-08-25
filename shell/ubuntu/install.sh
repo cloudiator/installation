@@ -11,7 +11,7 @@ echo "#### Installing dependencies ####"
 echo "#### Installing etcd ####"
 ./install_etcd.sh
 echo "#### Installing time-series database KairosDB ####"
-./install_kairosdb_sh
+./install_kairosdb.sh
 echo "#### Installing time-series database MySQL ####"
 ./install_mysql.sh
 echo "#### Installing colosseum ####"
