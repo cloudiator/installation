@@ -24,13 +24,15 @@ sysctl -p
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 apt-get install oracle-java8-installer -y
 
-#install git
-apt-get install git -y
-
-#install typesafe activator
-wget https://downloads.typesafe.com/typesafe-activator/1.3.6/typesafe-activator-1.3.6.zip?_ga=1.132158862.1231855203.1446477587 -O activator.zip
- 
+#install unzip
 apt-get install unzip
-unzip activator.zip
 
-rm activator.zip
+#deprecated as now only binaries are used
+#install git
+#apt-get install git -y
+
+#deprecated as activator is now included in binaries
+#install typesafe activator
+#wget https://downloads.typesafe.com/typesafe-activator/1.3.6/typesafe-activator-1.3.6.zip?_ga=1.132158862.1231855203.1446477587 -O activator.zip
+#unzip activator.zip
+#rm activator.zip

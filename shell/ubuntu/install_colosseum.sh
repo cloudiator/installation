@@ -8,12 +8,12 @@ read -s MYSQLPW
 echo
 
 # Read Nodegroup
-echo -n "NodeGroup (unique name for your cloudiator installation, should be dns compatible)"
+echo -n "NodeGroup (unique name for your cloudiator installation, should be dns compatible):"
 read NODEGROUP
 echo
 
 #resolve public ip of host
-local_address=$(dig +short myip.opendns.com @resolver1.opendns.com)
+#local_address=$(dig +short myip.opendns.com @resolver1.opendns.com)
 
 # generate a random application secret
 SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
