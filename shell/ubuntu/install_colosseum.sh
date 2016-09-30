@@ -51,9 +51,19 @@ echo "db.default.driver=org.mariadb.jdbc.Driver" >>  config.conf
 echo "db.default.url=\"mysql://root:$MYSQLPW@localhost/colosseum\"" >>  config.conf
 echo "colosseum.nodegroup = \"$NODEGROUP\"" >> config.conf
 
+echo 'downloading upstart config'
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/colosseum.conf -O /etc/init/colosseum.conf
+
+echo 'starting colosseum'
+start colosseum
+
+echo 'control colosseum via COMMAND colosseum' 
+
+#deprecated starting commands, now started via upstart
+#start colosseum in foreground
+#cd ../bin
+#./colosseum -Dconfig.file=../conf/config.conf
 #start colosseum in a screen, requires etcd running on localhost, otherwise change the respective args
-cd ../bin
-./colosseum -Dconfig.file=../conf/config.conf
 #cd colosseum
 #screen -S colosseum -d -m ../activator-dist-1.3.6/activator -Dconfig.file=conf/config.conf -Dlca.client.config.registry=etcdregistry -Dlca.client.config.registry.etcd.hosts=${local_address} run
 #cd ..
