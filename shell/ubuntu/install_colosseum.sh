@@ -28,9 +28,10 @@ cd ~/cloudiator
 echo 'downloading latest binary, version ${VERSION}'
 wget https://omi-dev.e-technik.uni-ulm.de/jenkins/job/cloudiator-colosseum/lastSuccessfulBuild/artifact/target/universal/colosseum-0.2.0-SNAPSHOT.zip
 
-unzip /colosseum-$VERSION-SNAPSHOT.zip
+unzip colosseum-$VERSION-SNAPSHOT.zip
 
 cd colosseum-$VERSION-SNAPSHOT
+
 
 
 
