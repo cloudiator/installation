@@ -1,7 +1,5 @@
 #!/bin/sh
 
-local_address=$(ip route get 8.8.8.8 | awk '{print $NF; exit}')
-
 echo 'creating folder cloudiator/etcd'
 mkdir -p ~/cloudiator/etcd
 
@@ -22,4 +20,5 @@ echo 'control etcd via COMMAND etcd'
 
 #deprecated, now started as service
 #start etcd on default ports 2379, 4001
+#local_address=$(ip route get 8.8.8.8 | awk '{print $NF; exit}')
 #nohup ./etcd/etcd --advertise-client-urls "http://${local_address}:2379,http://${local_address}:4001" --listen-client-urls="http://${local_address}:2379,http://${local_address}:4001" > log.out &
