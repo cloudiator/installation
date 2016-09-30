@@ -26,7 +26,7 @@ mkdir -p ~/cloudiator
 
 cd ~/cloudiator
 echo 'downloading latest binary, version ${VERSION}'
-wget https://omi-dev.e-technik.uni-ulm.de/jenkins/job/cloudiator-axe-aggregator/lastSuccessfulBuild/artifact/service/target/axe-aggregator-service-0.2.0-SNAPSHOT-jar-with-dependencies.jar
+wget https://omi-dev.e-technik.uni-ulm.de/jenkins/job/cloudiator-colosseum/lastSuccessfulBuild/artifact/target/universal/colosseum-0.2.0-SNAPSHOT.zip
 
 unzip /colosseum-$VERSION-SNAPSHOT.zip
 
@@ -37,6 +37,8 @@ cd colosseum-$VERSION-SNAPSHOT
 #download default config
 echo 'creating colosseum config'
 mkdir conf
+cd conf
+
 wget https://raw.githubusercontent.com/cloudiator/colosseum/master/conf/application.conf
 
 #create config file
