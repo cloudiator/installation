@@ -24,3 +24,5 @@ wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubun
 
 echo 'starting axe-aggregator'
 start axe-aggregator
+
+echo 'control axe-aggregator via COMMAND axe-aggregator' 

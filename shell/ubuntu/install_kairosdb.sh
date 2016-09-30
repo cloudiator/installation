@@ -19,3 +19,5 @@ tar -xzf kairosdb.tar.gz
 #kairosdb/bin/kairosdb.sh start
 
 start kairosdb
+
+echo 'control kairosdb via COMMAND kairosdb'
