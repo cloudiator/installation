@@ -18,6 +18,7 @@ start etcd
 
 echo 'control etcd via COMMAND etcd' 
 
+
 #deprecated, now started as service
 #start etcd on default ports 2379, 4001
 #local_address=$(ip route get 8.8.8.8 | awk '{print $NF; exit}')
