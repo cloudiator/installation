@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install apache2 php5 php5-curl
+apt-get install -y apache2 php5 php5-curl
 
 a2enmod rewrite
 
