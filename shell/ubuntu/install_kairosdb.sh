@@ -3,7 +3,7 @@
 echo 'creating folder kairosdb'
 mkdir -p ~/cloudiator
 
-cd cloudiator
+cd ~/cloudiator
 
 #download kairosdb
 echo 'downloading kairosdb'
