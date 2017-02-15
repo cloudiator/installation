@@ -6,7 +6,7 @@ source "$MY_DIR/util.sh"
 # install java 8 and upate packages
 add-apt-repository ppa:webupd8team/java -y
 
-apt-update
+apt-get update
 
 apt-get install -y wget
 
