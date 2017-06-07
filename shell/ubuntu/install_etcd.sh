@@ -1,9 +1,9 @@
 #!/bin/sh
 
 echo 'creating folder cloudiator/etcd'
-mkdir -p ~/cloudiator/etcd
+mkdir -p /opt/cloudiator/etcd
 
-cd ~/cloudiator
+cd /opt/cloudiator
 echo 'downloading etcd binary'
 wget https://github.com/coreos/etcd/releases/download/v2.1.1/etcd-v2.1.1-linux-amd64.tar.gz -O etcd.tar.gz
 

@@ -13,9 +13,9 @@
 #install from binary
 
 echo 'creating folder axe-aggregator'
-mkdir -p ~/cloudiator/axe-aggregator
+mkdir -p /opt/cloudiator/axe-aggregator
 
-cd ~/cloudiator/axe-aggregator
+cd /opt/cloudiator/axe-aggregator
 echo 'downloading latest binary'
 wget https://omi-dev.e-technik.uni-ulm.de/jenkins/job/cloudiator-axe-aggregator/lastSuccessfulBuild/artifact/service/target/axe-aggregator-service-0.2.0-SNAPSHOT-jar-with-dependencies.jar
 

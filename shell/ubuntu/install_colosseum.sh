@@ -22,9 +22,9 @@ SECRET=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
 #git clone https://github.com/cloudiator/colosseum.git
 
 echo 'creating folder axe-aggregator'
-mkdir -p ~/cloudiator
+mkdir -p /opt/cloudiator
 
-cd ~/cloudiator
+cd /opt/cloudiator
 echo 'downloading latest binary, version ${VERSION}'
 wget https://omi-dev.e-technik.uni-ulm.de/jenkins/job/cloudiator-colosseum/lastSuccessfulBuild/artifact/target/universal/colosseum-0.2.0-SNAPSHOT.zip
 

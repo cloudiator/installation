@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo 'creating folder kairosdb'
-mkdir -p ~/cloudiator
+mkdir -p /opt/cloudiator
 
-cd ~/cloudiator
+cd /opt/cloudiator
 
 #download kairosdb
 echo 'downloading kairosdb'
