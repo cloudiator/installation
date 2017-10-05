@@ -17,7 +17,7 @@ mkdir -p /opt/cloudiator/axe-aggregator
 
 cd /opt/cloudiator/axe-aggregator
 echo 'downloading latest binary'
-wget https://omi-dev.e-technik.uni-ulm.de/jenkins/job/cloudiator-axe-aggregator/lastSuccessfulBuild/artifact/service/target/axe-aggregator-service-0.2.0-SNAPSHOT-jar-with-dependencies.jar
+wget  https://oss.sonatype.org/content/repositories/snapshots/io/github/cloudiator/axe/axe-aggregator-service/0.2.0-SNAPSHOT/axe-aggregator-service-0.2.0-20161026.111801-20-jar-with-dependencies.jar -O axe-aggregator-service-0.2.0-SNAPSHOT-jar-with-dependencies.jar
 
 echo 'downloading upstart config'
 wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/axe-aggregator.conf -O /etc/init/axe-aggregator.conf
