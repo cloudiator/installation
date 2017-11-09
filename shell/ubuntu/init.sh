@@ -10,7 +10,7 @@ apt-get update
 
 apt-get install -y wget
 
-apt-get install -y maven
+
 
 #disable ipv6 because at least for the ubuntu server (cloud image) 14.04 will bind the address to an ipv6 address as default 
 #add these properties to the end of the /etc/sysctl.conf
@@ -23,6 +23,9 @@ sysctl -p
 #install java 8
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
 apt-get install oracle-java8-installer -y
+
+#install maven (not required anmyore
+#apt-get install -y maven
 
 #install unzip
 apt-get install unzip
