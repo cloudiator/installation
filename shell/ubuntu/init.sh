@@ -27,6 +27,9 @@ apt-get install oracle-java8-installer -y
 #install unzip
 apt-get install unzip
 
+#install dns-utils to resolve public IP
+apt-get -y install dnsutils 
+
 #deprecated as now only binaries are used
 #install git
 #apt-get install git -y
