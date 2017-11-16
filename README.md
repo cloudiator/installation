@@ -2,20 +2,21 @@
 Installation routines for the cloudiator toolset. The installation contains the tools Colosseum, Axe and also the required databases.
 
 
-##Shell
+## Shell
 
 Shell based install scripts are available for the following Unix distributions:
 
-* Ubuntu
+* Ubuntu 14.04
+* Ubuntu 16.04
 
-##Chef
-
-TBD
-
-##Docker
+## Chef
 
 TBD
 
-##Puppet
+## Docker
+
+TBD
+
+## Puppet
 
 TBD
