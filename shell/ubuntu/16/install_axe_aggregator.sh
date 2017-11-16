@@ -24,6 +24,7 @@ wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubun
 
 #download systemd start script
 wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/start_axe-aggregator.sh -O /opt/cloudiator/start_axe-aggregator.sh
+chmod +x /opt/cloudiator/start_axe-aggregator.sh
 
 echo 'starting axe-aggregator'
 systemctl enable axe-aggregator.service

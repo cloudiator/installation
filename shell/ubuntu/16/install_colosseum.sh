@@ -57,6 +57,7 @@ wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubun
 
 #download systemd start script
 wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/start_colosseum.sh -O /opt/cloudiator/start_colosseum.sh
+chmod +x /opt/cloudiator/start_colosseum.sh
 
 echo 'starting colosseum'
 systemctl enable colosseum.service

@@ -15,6 +15,7 @@ wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubun
 
 #download systemd start script
 wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/start_etcd.sh -O /opt/cloudiator/start_etcd.sh
+chmod +x /opt/cloudiator/start_etcd.sh
 
 echo 'starting etcd'
 systemctl enable etcd.service
