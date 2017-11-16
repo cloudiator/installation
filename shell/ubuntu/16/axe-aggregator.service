@@ -4,7 +4,7 @@ Description=Axe-Aggregator
 
 [Service]
 Type=simple
-ExecStart=java -jar /opt/cloudiator/axe-aggregator/axe-aggregator-service-0.2.0-SNAPSHOT-jar-with-dependencies.jar  2>&1 >> /var/log/axe-aggregator.log
+ExecStart=/opt/cloudiator/start_axe-aggregator.sh
 
 [Install]
 WantedBy=multi-user.target
