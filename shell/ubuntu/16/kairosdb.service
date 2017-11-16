@@ -1,0 +1,10 @@
+[Unit]
+Description=KairosDB
+
+
+[Service]
+Type=simple
+ExecStart=/opt/cloudiator/kairosdb/bin/kairosdb.sh run  2>&1 >> /var/log/kairosdb.log
+
+[Install]
+WantedBy=multi-user.target
