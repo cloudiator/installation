@@ -51,8 +51,12 @@ echo "db.default.driver=org.mariadb.jdbc.Driver" >>  config.conf
 echo "db.default.url=\"mysql://root:$MYSQLPW@localhost/colosseum\"" >>  config.conf
 echo "colosseum.nodegroup = \"$NODEGROUP\"" >> config.conf
 
-echo 'downloading upstart config'
+echo 'downloading systemd config'
 wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/colosseum.service -O /etc/systemd/system/colosseum.service
+
+
+#download systemd start script
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/start_colosseum.sh -O /opt/cloudiator/start_colosseum.sh
 
 echo 'starting colosseum'
 systemctl enable colosseum.service

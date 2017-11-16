@@ -10,8 +10,11 @@ wget https://github.com/coreos/etcd/releases/download/v2.1.1/etcd-v2.1.1-linux-a
 mkdir etcd
 tar xzvf etcd.tar.gz -C etcd --strip-components=1
 
-echo 'downloading upstart config'
+echo 'downloading systemd config'
 wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/etcd.service -O /etc/systemd/system/etcd.service
+
+#download systemd start script
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/start_etcd.sh -O /opt/cloudiator/start_etcd.sh
 
 echo 'starting etcd'
 systemctl enable etcd.service

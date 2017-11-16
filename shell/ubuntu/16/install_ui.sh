@@ -1,6 +1,10 @@
 #!/bin/bash
 
-apt-get install -y apache2 php5 php5-curl
+#force php5 
+add-apt-repository ppa:ondrej/php -y
+sudo apt-get update
+
+apt-get install -y apache2 php5.6 php5.6-curl
 
 a2enmod rewrite
 
