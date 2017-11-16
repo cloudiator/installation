@@ -11,12 +11,14 @@ mkdir etcd
 tar xzvf etcd.tar.gz -C etcd --strip-components=1
 
 echo 'downloading upstart config'
-wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/etcd.conf -O /etc/init/etcd.conf
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/etcd.service -O /etc/systemd/system/etcd.service
 
 echo 'starting etcd'
-start etcd
+systemctl enable etcd.service
 
-echo 'control etcd via COMMAND etcd' 
+systemctl start etcd.service 
+
+echo 'control etcd via COMMAND etcd.service' 
 
 
 #deprecated, now started as service

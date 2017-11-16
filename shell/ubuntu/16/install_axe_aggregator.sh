@@ -20,9 +20,11 @@ echo 'downloading latest binary'
 wget  https://oss.sonatype.org/content/repositories/snapshots/io/github/cloudiator/axe/axe-aggregator-service/0.2.0-SNAPSHOT/axe-aggregator-service-0.2.0-20161026.111801-20-jar-with-dependencies.jar -O axe-aggregator-service-0.2.0-SNAPSHOT-jar-with-dependencies.jar
 
 echo 'downloading upstart config'
-wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/axe-aggregator.conf -O /etc/init/axe-aggregator.conf
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/axe-aggregator.service -O /etc/systemd/system/axe-aggregator.service
 
 echo 'starting axe-aggregator'
-start axe-aggregator
+systemctl enable axe-aggregator.service
 
-echo 'control axe-aggregator via COMMAND axe-aggregator' 
+systemctl start axe-aggregator.service 
+
+echo 'control axe-aggregator via COMMAND axe-aggregator.service ' 

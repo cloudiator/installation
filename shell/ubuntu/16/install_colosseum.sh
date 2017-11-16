@@ -52,12 +52,13 @@ echo "db.default.url=\"mysql://root:$MYSQLPW@localhost/colosseum\"" >>  config.c
 echo "colosseum.nodegroup = \"$NODEGROUP\"" >> config.conf
 
 echo 'downloading upstart config'
-wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/colosseum.conf -O /etc/init/colosseum.conf
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/16/colosseum.service -O /etc/systemd/system/colosseum.service
 
 echo 'starting colosseum'
-start colosseum
+systemctl enable colosseum.service
 
-echo 'control colosseum via COMMAND colosseum' 
+systemctl start colosseum.service 
+echo 'control colosseum via COMMAND colosseum.service' 
 
 #deprecated starting commands, now started via upstart
 #start colosseum in foreground
