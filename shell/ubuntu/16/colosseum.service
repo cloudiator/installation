@@ -1,0 +1,16 @@
+[Unit]
+Description=Colosseum
+
+
+[Service]
+Type=simple
+Environment=SERVICE=colosseum
+Environment=VERSION=0.2.0
+Environment=PUBLIC_IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+ExecStart=exec /opt/cloudiator/colosseum-$VERSION-SNAPSHOT/bin/colosseum -Dconfig.file=/opt/cloudiator/colosseum-$VERSION-SNAPSHOT/conf/config.conf -Dlca.client.config.registry=etcdregistry -Dlca.client.config.registry.etcd.hosts=${PUBLIC_IP} 2>&1 >> /var/log/$SERVICE.log
+
+[Install]
+WantedBy=multi-user.target
+
+
+
