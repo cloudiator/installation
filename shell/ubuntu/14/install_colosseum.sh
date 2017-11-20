@@ -52,7 +52,7 @@ echo "db.default.url=\"mysql://root:$MYSQLPW@localhost/colosseum\"" >>  config.c
 echo "colosseum.nodegroup = \"$NODEGROUP\"" >> config.conf
 
 echo 'downloading upstart config'
-wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/colosseum.conf -O /etc/init/colosseum.conf
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/14/colosseum.conf -O /etc/init/colosseum.conf
 
 echo 'starting colosseum'
 start colosseum
