@@ -9,7 +9,7 @@ cd /opt/cloudiator
 echo 'downloading kairosdb'
 wget https://github.com/kairosdb/kairosdb/releases/download/v1.1.1/kairosdb-1.1.1-1.tar.gz -O kairosdb.tar.gz
 
-wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/kairosdb.conf -O /etc/init/kairosdb.conf
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/14/kairosdb.conf -O /etc/init/kairosdb.conf
 
 #extract kairosdb
 echo 'extracting kairosdb'
