@@ -11,7 +11,7 @@ mkdir etcd
 tar xzvf etcd.tar.gz -C etcd --strip-components=1
 
 echo 'downloading upstart config'
-wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/etcd.conf -O /etc/init/etcd.conf
+wget https://raw.githubusercontent.com/cloudiator/installation/master/shell/ubuntu/14/etcd.conf -O /etc/init/etcd.conf
 
 echo 'starting etcd'
 start etcd
