@@ -4,7 +4,8 @@
 add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 
-apt-get install -y apache2 php5.6 php5.6-curl
+apt-get install -y apache2 php5.6 php5.6-curl php5.6-xml
+
 
 a2enmod rewrite
 
