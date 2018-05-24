@@ -1,6 +1,6 @@
 # Distribution: Ubuntu
 
-These scripts are tested against Ubunut Server 14.04 LTS
+These scripts are tested against Ubunut Server 16.04 LTS
 
 # Installation
 All scripts should be run with root privileges
