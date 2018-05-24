@@ -7,12 +7,11 @@ All scripts should be run with root privileges
 
 The scripts will install all required tools to the folder: /opt/cloudiator
 
-Run the scripts in the order:
+## Installation of all tools
 
-1. init.sh
-2. install_etcd.sh
-3. install kairosdb_sh
-4. install_mysql.sh (specify first a secure password in this script!)
-5. install_colosseum.sh (will be started in a screen "colosseum")
-6. install_axe_aggregator.sh
+run the install.sh script with root privileges
+
+## Installation of single tools
+
+run the respective install_{toolname}.sh script.
 
