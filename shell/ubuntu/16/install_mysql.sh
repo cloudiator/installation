@@ -11,4 +11,4 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password_again passwo
 apt-get -y install mysql-server
 
 #create colosseum database
-mysql -u root -p$MYSQLPW -e "CREATE DATABASE colosseum;"
+mysql -u root -p$MYSQLPW -e "CREATE DATABASE colosseum CHARACTER SET utf8 COLLATE utf8_general_ci;"
